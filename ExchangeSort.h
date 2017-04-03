@@ -1,11 +1,12 @@
 #include<iostream>
 
-//Ã°ÅİÅÅĞò£ºÁ½Á½±È½Ï£¬°Ñ×î´ó(×îĞ¡)Öµ·Åµ½Ä©Î²
+
+//å†’æ³¡æ’åºï¼šä¸¤ä¸¤æ¯”è¾ƒï¼ŒæŠŠæœ€å¤§(æœ€å°)å€¼æ”¾åˆ°æœ«å°¾
 void BubbleSort(int arr[],size_t size)
 {
-	for (size_t i = 0; i < size;++i) //¿ØÖÆÅÅĞò´ÎÊı
+	for (size_t i = 0; i < size;++i) //æ§åˆ¶æ’åºæ¬¡æ•°
 	{
-		for (size_t j = 0; j < size - i - 1; ++j) //Á½Á½±È½Ï£¬×¢ÒâÊı×éÔ½½ç
+		for (size_t j = 0; j < size - i - 1; ++j) //ä¸¤ä¸¤æ¯”è¾ƒï¼Œæ³¨æ„æ•°ç»„è¶Šç•Œ
 		{
 			if (arr[j] > arr[j + 1])
 			{
@@ -14,13 +15,13 @@ void BubbleSort(int arr[],size_t size)
 		}
 	}
 }
-//Ã°ÅİÅÅĞòÓÅ»¯£¬¶¨ÒåÒ»¸ö±êÖ¾Æ÷£¬
+//å†’æ³¡æ’åºä¼˜åŒ–ï¼Œå®šä¹‰ä¸€ä¸ªæ ‡å¿—å™¨ï¼Œ
 void BubbleSort_P(int arr[], size_t size)
 {
 	bool flag = true;
-	for (size_t i = 0; i < size; ++i) //¿ØÖÆÅÅĞò´ÎÊı
+	for (size_t i = 0; i < size; ++i) //æ§åˆ¶æ’åºæ¬¡æ•°
 	{
-		for (size_t j = 0; j < size - i - 1; ++j) //Á½Á½±È½Ï£¬×¢ÒâÊı×éÔ½½ç
+		for (size_t j = 0; j < size - i - 1; ++j) //ä¸¤ä¸¤æ¯”è¾ƒï¼Œæ³¨æ„æ•°ç»„è¶Šç•Œ
 		{
 			if (arr[j] > arr[j + 1])
 			{
@@ -34,13 +35,13 @@ void BubbleSort_P(int arr[], size_t size)
 }
 
 
-//¿ìËÙÅÅĞò  ²»ÎÈ¶¨ÅÅĞò
-// ·ÖÖÎ·¨£ºÕÒÒ»¸ökeyÖµ£¬´óÓÚkeyµÄ·ÅÔÚkeyÖ®ºó£¬Ğ¡ÓÚ·ÅÔÚkeyÖ®Ç°	    
-//		 keyÎªÊı×é×îºóÒ»Î»,begin´ÓÇ°ÕÒ´óÓÚkeyµÄ£¬end´ÓºóÕÒĞ¡ÓÚkey£¬È»ºó½»»»
-//Ò»´Î¿ìËÙÅÅĞò
-int Partition(int arr[], int begin, int end)//[]±ÕÇø¼ä
+//å¿«é€Ÿæ’åº  ä¸ç¨³å®šæ’åº
+// åˆ†æ²»æ³•ï¼šæ‰¾ä¸€ä¸ªkeyå€¼ï¼Œå¤§äºkeyçš„æ”¾åœ¨keyä¹‹åï¼Œå°äºæ”¾åœ¨keyä¹‹å‰	    
+//		 keyä¸ºæ•°ç»„æœ€åä¸€ä½,beginä»å‰æ‰¾å¤§äºkeyçš„ï¼Œendä»åæ‰¾å°äºkeyï¼Œç„¶åäº¤æ¢
+//ä¸€æ¬¡å¿«é€Ÿæ’åº
+int Partition(int arr[], int begin, int end)//[]é—­åŒºé—´
 {
-	int key = arr[begin]; //±ê¼Ç×î×ó±ß£¬ÏÈ´Ó×îÓÒ±ß¿ªÊ¼ÕÒ
+	int key = arr[begin]; //æ ‡è®°æœ€å·¦è¾¹ï¼Œå…ˆä»æœ€å³è¾¹å¼€å§‹æ‰¾
 	while (begin < end)
 	{
 		while (begin < end && arr[end] > key)
