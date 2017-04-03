@@ -63,6 +63,7 @@ int Partition(int arr[], int begin, int end)//[]闭区间
 	return begin;
 	
 }
+
 void QuickSort(int arr[],int left,int right)
 {
 	if (left < right)
