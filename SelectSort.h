@@ -74,6 +74,7 @@ void SelectionSort_P(int arr[],size_t size)
 //堆排序: 升序-> 大堆 降序->小堆
 // 升序 1创建堆
 //		2把堆顶 与最后一位交换位置，调整堆
+
 void HeapAdjust(int arr[], int root, size_t size) //从根节点向下调整
 {
 	size_t parent = root;
@@ -96,6 +97,7 @@ void HeapAdjust(int arr[], int root, size_t size) //从根节点向下调整
 			break;
 	}
 }
+
 void HeapSort(int arr[],size_t size) //升序
 {
 	//1创建堆，从最后一个非叶子节点开始调整
